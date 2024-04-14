@@ -1,19 +1,20 @@
 import React from 'react';
 
-function LembreteLista() {
-  const lembretesFicticios = [
-    "Preparar aula de programação",
-    "Fazer feira",
-    "Preparar marmitas"
-  ];
+function LembreteLista({ lembretes, onLembreteClick }) {
 
   return (
     <div>
-      <ul>
-        {lembretesFicticios.map((lembrete, index) => (
-          <li key={index}>{lembrete}</li>
+      <div className="row">
+        {lembretes.map((lembrete, index) => (
+          <div key={index} className="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div className="card">
+              <div className="card-body" onClick={() => onLembreteClick(lembrete)}>
+                <p className="card-text">{lembrete}</p>
+              </div>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
