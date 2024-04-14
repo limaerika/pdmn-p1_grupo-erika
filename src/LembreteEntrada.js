@@ -1,25 +1,26 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-function LembreteEntrada(props) {
-    const [lembrete, setLembrete] = useState('');
+function LembreteEntrada({ onAddLembrete }) {
+  const [lembrete, setLembrete] = useState('');
 
-    function handleAdicionar() {
-        props.onAddLembrete(lembrete);
-        setLembrete('');
-    }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onAddLembrete(lembrete);
+    setLembrete('');
+  };
 
-return (
-    <div>
-        <input
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
         type="text"
         value={lembrete}
-        onChange={ (e) => setLembrete(e.target.value)}
-        placeholder="Digite seu novo lembrete"
+        onChange={e => setLembrete(e.target.value)}
+        placeholder="Digite um novo lembrete..."
         className="form-control"
-        />
-        <button onClick={handleAdicionar} className="btn btn-primary mt-3">Cadastrar</button>
-    </div>
-);
+      />
+      <button type="submit" className="btn btn-primary mt-2">Adicionar Lembrete</button>
+    </form>
+  );
 }
 
 export default LembreteEntrada;
