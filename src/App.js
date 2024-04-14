@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import LembreteEntrada from './LembreteEntrada';
+import LembreteLista from './LembreteLista';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const [lembretes, setLembretes] = useState([]);
+  const [lembretes, setLembretes] = React.useState([]);
 
   const addLembrete = (novoLembrete) => {
     setLembretes(prevLembretes => [...prevLembretes, novoLembrete]);
@@ -14,6 +15,7 @@ function App() {
       <div className="row">
         <div className="col">
           <LembreteEntrada onAddLembrete={addLembrete} />
+          <LembreteLista />
         </div>
       </div>
     </div>

@@ -1,12 +1,21 @@
 import React from 'react';
 
-function LembreteLista({ lembretes }) {
+function LembreteLista() {
+  const lembretesFicticios = [
+    "Lembrete fictício 1",
+    "Lembrete fictício 2",
+    "Lembrete fictício 3"
+  ];
+
   return (
-    <ul className="list-group">
-      {lembretes.map((lembrete, index) => (
-        <li key={index} className="list-group-item">{lembrete}</li>
-      ))}
-    </ul>
+    <div>
+      <h2>Lembretes Fictícios</h2>
+      <ul>
+        {lembretesFicticios.map((lembrete, index) => (
+          <li key={index}>{lembrete}</li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
