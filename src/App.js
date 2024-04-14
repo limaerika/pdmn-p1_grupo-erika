@@ -1,15 +1,14 @@
-import React from 'react';
-import LembreteEntrada from './LembreteEntrada';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  function addLembrete(lembrete) {
-    console.log('Adicionar lembrete:', lembrete);
-  }
-  
   return (
-    <div className="container text-center mt-5">
-      <LembreteEntrada onAddLembrete={addLembrete} />
+    <div className="container">
+      <div className="row">
+        <div className="col">
+          <h1>Hello, lembretes!</h1>
+        </div>
+      </div>
     </div>
   );
 }
