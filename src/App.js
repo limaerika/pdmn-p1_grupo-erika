@@ -11,11 +11,11 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <div className="row">
+    <div class="container-md">
+      <div class="row align-itens-center">
         <div className="col">
-          <LembreteEntrada onAddLembrete={addLembrete} />
-          <LembreteLista />
+        <LembreteLista />
+        <LembreteEntrada onAddLembrete={addLembrete} />
         </div>
       </div>
     </div>

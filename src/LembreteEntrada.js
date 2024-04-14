@@ -5,6 +5,7 @@ function LembreteEntrada({ onAddLembrete }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (!lembrete.trim()) return; // Impede a adição de lembretes vazios
     onAddLembrete(lembrete);
     setLembrete('');
   };
@@ -15,7 +16,7 @@ function LembreteEntrada({ onAddLembrete }) {
         type="text"
         value={lembrete}
         onChange={e => setLembrete(e.target.value)}
-        placeholder="Digite um novo lembrete..."
+        placeholder="Digite um novo lembrete"
         className="form-control"
       />
       <button type="submit" className="btn btn-primary mt-2">Adicionar Lembrete</button>
@@ -24,3 +25,4 @@ function LembreteEntrada({ onAddLembrete }) {
 }
 
 export default LembreteEntrada;
+
