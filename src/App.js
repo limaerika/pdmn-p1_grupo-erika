@@ -14,8 +14,8 @@ function App() {
     <div class="container-md">
       <div class="row align-itens-center">
         <div className="col">
-        <LembreteLista />
-        <LembreteEntrada onAddLembrete={addLembrete} />
+          <LembreteLista />
+          <LembreteEntrada onAddLembrete={addLembrete} />
         </div>
       </div>
     </div>
