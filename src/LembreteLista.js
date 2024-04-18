@@ -6,7 +6,7 @@ function LembreteLista({ lembretes, onLembreteClick }) {
     <div>
       <div className="row">
         {lembretes.map((lembrete, index) => (
-          <div key={index} className="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div key={index} className="col-xxl-3 col-lg-4 col-sm-12 p-2">
             <div className="card">
               <div className="card-body" onClick={() => onLembreteClick(lembrete)}>
                 <p className="card-text">{lembrete}</p>

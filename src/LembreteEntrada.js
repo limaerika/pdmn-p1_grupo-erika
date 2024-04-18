@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function LembreteEntrada({ onAddLembrete }) {
   const [lembrete, setLembrete] = useState('');
 
-  const handleSubmit = (event) => {
+  const btnSubmit  = (event) => {
     event.preventDefault();
     if (!lembrete.trim()) return; // Impede a adição de lembretes vazios
     onAddLembrete(lembrete);
@@ -11,7 +11,7 @@ function LembreteEntrada({ onAddLembrete }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={btnSubmit}>
       <div className="input-group">
         <input
           type="text"
